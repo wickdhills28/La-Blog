@@ -1,55 +1,36 @@
 <% include ./partials/header %>
-
-<div class="ui main text container">
-  <div class="ui huge header">
+<div class="ui container">
+  <div class="ui huge header" align="center">
     LA BLOG
   </div>
-  <div class="ui top attached segment">
     <div class="ui divided items"> 
-
-      </div>
       <% blogs.forEach(function(blog){ %>
-        <div class="item">
-          <div>
-          <div class="image"></div>
-            <img class="scott" src="<%= blog.image %>" width="80%" height="auto"/>
-          </div>
-
-          <div class="content">
-            <a class="header" href="/blogs/<%= blog._id%>"><%=blog.title%></a>
-            <div class="meta">
-              <span><%= blog.create.toDateString() %></span>
-            </div>
-            <div class="description">
-            
-            </div>
-          </div>
-          <h2><%= blog.title %></h2>
-
-    <p>
-    <div class="ui labeled button" tabindex="0">
-      <div class="ui red button">
-        <i class="heart icon"></i> Like
+      <div class="item">
+      <div class="ui large image">
+        <img src="<%= blog.image %>">
       </div>
-      <a class="ui basic red left pointing label">
-        <%- Math.round(Math.random()*100) %>
-      </a>
-    </div>
-    </p>
+      <div class="content">
+        <div class="header"><%= blog.title %></div>
+        <div class="meta">
+          <span class="cinema">Posted on <%= blog.create.toDateString() %></span>
+        </div>
+        <div class="description">
+          <p><%= blog.body.substring(0,100) %> ...</p>
+        </div>
 
-    <div class="description"><p><%= blog.body.substring(0,100) %> ...</p></div>
-    <div class="extra">
-      <a class="ui floaded basic violet button" href="/blogs/<%= blog._id%>">
-        Read More
-        <i class="right chevron icon"></i>
-      </a>
+        <div class="extra">
+        <a href="/blogs/<%= blog._id%>">          
+          <div class="ui right floated button">
+            Read More
+            <i class="right chevron icon"></i>
+          </div>
+        </a>
+      </div>
+      </div>
     </div>
-    <div class="ui divider"></div>
-    </div>
-    <% }) %> 
+      <% }) %> 
     </div>
   </div>
 
-
-
 <% include ./partials/footer %>
+

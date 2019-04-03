@@ -31,26 +31,29 @@
       #delete{
         display:inline;
       }
-      p{
-        font-size:20px;
-      }
     </style>
   </head>
   
-  <body >
+  <body>
     <div class="ui fixed inverted menu">
       <div class="ui container">
-        <a href="/lablog" class="header item"><i class="play icon"></i> LA BLOG</a>
-        <a href="/blogs" class="item"><i class="home icon"></i>La Home</a>
-        <a href="/blogs/new" class="item"
-          ><i class="keyboard icon"></i> La Post
-        </a>
-        <a href="/blogs/rodeo" class="item"> <i class="music icon"></i>Rodeo</a>
-        <a href="/blogs/birds" class="item"> <i class="music icon"></i>Birds</a>
-        <a href="/blogs/astro" class="item"> <i class="music icon"></i>Astro</a>
-        <a href="/blogs/mixtape" class="item"> <i class="music icon"></i>Mixtapes</a>
-        <a href="/logout" class="item"> <i class="pause icon"></i>La Log Out</a>
-
+        <a href="/login" class="header item"><i class="sign-in icon"></i> La Log In</a>
+        <a href="/register" class="header item"><i class="check square icon"></i>La Register</a>
       </div>
     </div>
+    <h2 class="ui header" >LA LOG IN</h1>
 
+    <form class="ui form" action="/login" method="POST">
+    <div class="field">
+        <label>La Username</label>
+        <input type="text" name="username" placeholder="username">
+    </div>
+    <div class="field">
+        <label>La Password</label>
+        <input type="password" name="password" placeholder="password">
+    </div>
+    <input class="ui primary button" type="submit">
+    </form>
+
+</body>
+</html>
