@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>La Blog</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
+    >
+    <link rel="stylesheet"
+      type="text/css"
+      href="/stylesheets/app.css"
+      >
+
+      <style type="text/css">
+      body {
+        margin-top: 7em;
+        margin-left: 5em;
+        background-color: #FFFFFF;
+      }
+      i.icon {
+        font-size: 2em;
+      }
+      // Center images?
+      img.scott{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      #delete{
+        display:inline;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="/login" class="header item"><i class="sign-in icon"></i> La Log In</a>
+        <a href="/register" class="header item"><i class="check square icon"></i>La Register</a>
+      </div>
+    </div>
+
+    <h1 class="ui header">LA LOG IN</h1>
+
+    <form class="ui form" action="/login" method="POST">
+    <div class="field">
+        <label>La Username</label>
+        <input type="text" name="username" placeholder="username">
+    </div>
+    <div class="field">
+        <label>La Password</label>
+        <input type="password" name="password" placeholder="password">
+    </div>
+    <input class="ui primary button" type="submit">
+    </form>
+
+</body>
+</html>
